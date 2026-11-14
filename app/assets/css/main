@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #819373;
+  --color-secondary: #E8E8E8;
+  --color-third: #363636;
+  --color-fourth: #626E58;
+
+  --font-sans: "Poppins", Arial, sans-serif;
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1520px;
+
+  --default-transition-duration: 300ms;
+
+  --spacing-25v: 25vh;
+  --spacing-50v: 50vh;
+  --spacing-75v: 75vh;
+}

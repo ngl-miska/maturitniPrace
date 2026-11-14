@@ -1,0 +1,8 @@
+{
+  "navbar": [
+    { "title": "Domů", "link": "/" },
+    { "title": "Kde hrajeme", "link": "/kde-hrajeme" },
+    { "title": "Služby", "link": "/sluzby" },
+    { "title": "Kontakt", "link": "/kontakt" }
+  ]
+}
