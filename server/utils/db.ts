@@ -1,14 +1,11 @@
-import type { EventHandler, EventHandlerRequest } from 'h3'
+import { drizzle } from 'drizzle-orm/mysql2'
+import mysql from 'mysql2/promise'
+import * as schema from '../database/schema'
 
-export const defineWrappedResponseHandler = <T extends EventHandlerRequest, D> (
-  handler: EventHandler<T, D>
-): EventHandler<T, D> =>
-    defineEventHandler<T>(async (event) => {
-      try {
-        const response = await handler(event)
-        return { response }
-      } catch (err) {
-      // Error handling
-        return { err }
-      }
-    })
+let pool: mysql.Pool | undefined
+
+export const useDb = () => {
+  pool ??= mysql.createPool(useRuntimeConfig().databaseUrl)
+  return drizzle(pool, { schema, mode: 'default' })
+}
+export { schema }
