@@ -3,6 +3,6 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   runtimeConfig: {
-    databaseUrl: 'mysql://root:@localhost:3306/rezervace'
+    databaseUrl: ''
   }
 })
